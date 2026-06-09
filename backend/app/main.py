@@ -1,14 +1,19 @@
 from fastapi import FastAPI
-from app.database.database import db
 
-app = FastAPI()
+from app.routes.auth_routes import router as auth_router
+
+app = FastAPI(
+    title="Multilingual Crop Disease Knowledge Chatbot"
+)
+
+app.include_router(
+    auth_router,
+    prefix="/api/auth",
+    tags=["Authentication"]
+)
 
 @app.get("/")
 async def root():
-
-    collections = await db.list_collection_names()
-
     return {
-        "message": "Backend Running",
-        "collections": collections
+        "message": "Backend Running Successfully"
     }
