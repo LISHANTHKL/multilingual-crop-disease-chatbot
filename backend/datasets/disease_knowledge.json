@@ -1,0 +1,179 @@
+[
+  {
+    "crop": "Rice",
+    "disease": "Brown Spot",
+    "symptoms": ["brown spots", "circular brown lesions", "yellow halo around spots"],
+    "cause": "Fungal infection",
+    "treatment": "Apply fungicide and improve drainage",
+    "prevention": "Use disease resistant varieties"
+  },
+  {
+    "crop": "Rice",
+    "disease": "Leaf Blast",
+    "symptoms": ["diamond shaped lesions", "gray center spots", "leaf drying"],
+    "cause": "Magnaporthe fungus",
+    "treatment": "Use Tricyclazole fungicide",
+    "prevention": "Balanced nitrogen fertilization"
+  },
+
+  {
+    "crop": "Tomato",
+    "disease": "Early Blight",
+    "symptoms": ["dark brown spots", "concentric rings", "leaf yellowing"],
+    "cause": "Alternaria fungus",
+    "treatment": "Apply Mancozeb spray",
+    "prevention": "Crop rotation"
+  },
+  {
+    "crop": "Tomato",
+    "disease": "Late Blight",
+    "symptoms": ["water soaked lesions", "black patches", "fruit rot"],
+    "cause": "Phytophthora infestans",
+    "treatment": "Copper fungicide",
+    "prevention": "Avoid excessive humidity"
+  },
+
+  {
+    "crop": "Potato",
+    "disease": "Late Blight",
+    "symptoms": ["brown lesions", "leaf blackening", "stem rot"],
+    "cause": "Phytophthora infestans",
+    "treatment": "Metalaxyl spray",
+    "prevention": "Use certified seeds"
+  },
+
+  {
+    "crop": "Wheat",
+    "disease": "Leaf Rust",
+    "symptoms": ["orange pustules", "yellow leaves", "reduced grain yield"],
+    "cause": "Puccinia fungus",
+    "treatment": "Apply fungicides",
+    "prevention": "Grow resistant varieties"
+  },
+
+  {
+    "crop": "Corn",
+    "disease": "Northern Leaf Blight",
+    "symptoms": ["long gray lesions", "leaf drying", "reduced growth"],
+    "cause": "Exserohilum fungus",
+    "treatment": "Use fungicides",
+    "prevention": "Crop rotation"
+  },
+
+  {
+    "crop": "Cotton",
+    "disease": "Bacterial Blight",
+    "symptoms": ["angular leaf spots", "boll rot", "leaf shedding"],
+    "cause": "Bacterial infection",
+    "treatment": "Copper bactericides",
+    "prevention": "Use certified seeds"
+  },
+
+  {
+    "crop": "Banana",
+    "disease": "Panama Wilt",
+    "symptoms": ["yellow leaves", "wilting", "plant collapse"],
+    "cause": "Fusarium fungus",
+    "treatment": "Remove infected plants",
+    "prevention": "Disease resistant varieties"
+  },
+
+  {
+    "crop": "Apple",
+    "disease": "Apple Scab",
+    "symptoms": ["dark leaf spots", "fruit lesions", "premature leaf drop"],
+    "cause": "Venturia fungus",
+    "treatment": "Apply fungicides",
+    "prevention": "Prune infected branches"
+  },
+
+  {
+    "crop": "Grapes",
+    "disease": "Powdery Mildew",
+    "symptoms": ["white powder", "leaf curling", "fruit damage"],
+    "cause": "Fungal infection",
+    "treatment": "Sulfur spray",
+    "prevention": "Improve air circulation"
+  },
+
+  {
+    "crop": "Mango",
+    "disease": "Anthracnose",
+    "symptoms": ["black leaf spots", "fruit lesions", "twig dieback"],
+    "cause": "Colletotrichum fungus",
+    "treatment": "Copper fungicide",
+    "prevention": "Field sanitation"
+  },
+
+  {
+    "crop": "Sugarcane",
+    "disease": "Red Rot",
+    "symptoms": ["red stem tissue", "dry leaves", "stunted growth"],
+    "cause": "Fungal infection",
+    "treatment": "Remove infected canes",
+    "prevention": "Disease-free seed material"
+  },
+
+  {
+    "crop": "Onion",
+    "disease": "Purple Blotch",
+    "symptoms": ["purple lesions", "leaf drying", "bulb reduction"],
+    "cause": "Alternaria fungus",
+    "treatment": "Apply fungicides",
+    "prevention": "Proper field drainage"
+  },
+
+  {
+    "crop": "Chilli",
+    "disease": "Leaf Curl Virus",
+    "symptoms": ["leaf curling", "stunted growth", "yellow veins"],
+    "cause": "Virus transmitted by whiteflies",
+    "treatment": "Control whiteflies",
+    "prevention": "Use resistant varieties"
+  },
+
+  {
+    "crop": "Pepper",
+    "disease": "Phytophthora Blight",
+    "symptoms": ["stem rot", "leaf wilting", "fruit decay"],
+    "cause": "Phytophthora fungus",
+    "treatment": "Copper fungicides",
+    "prevention": "Improve drainage"
+  },
+
+  {
+    "crop": "Coconut",
+    "disease": "Bud Rot",
+    "symptoms": ["rotting central shoot", "yellow leaves", "crown decay"],
+    "cause": "Phytophthora fungus",
+    "treatment": "Copper oxychloride",
+    "prevention": "Improve field drainage"
+  },
+
+  {
+    "crop": "Arecanut",
+    "disease": "Yellow Leaf Disease",
+    "symptoms": ["yellow leaves", "stunted growth", "reduced yield"],
+    "cause": "Phytoplasma infection",
+    "treatment": "Remove infected palms",
+    "prevention": "Maintain plantation hygiene"
+  },
+
+  {
+    "crop": "Jackfruit",
+    "disease": "Fruit Rot",
+    "symptoms": ["fruit decay", "black patches", "soft fruit"],
+    "cause": "Fungal infection",
+    "treatment": "Apply fungicides",
+    "prevention": "Proper orchard sanitation"
+  },
+
+  {
+    "crop": "Cashew",
+    "disease": "Anthracnose",
+    "symptoms": ["leaf spots", "twig dieback", "fruit lesions"],
+    "cause": "Colletotrichum fungus",
+    "treatment": "Copper fungicide",
+    "prevention": "Pruning and sanitation"
+  }
+]

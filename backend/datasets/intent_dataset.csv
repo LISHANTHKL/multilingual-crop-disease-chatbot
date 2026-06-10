@@ -1,0 +1,37 @@
+query,intent
+Rice leaves turning yellow,Disease Diagnosis
+Rice plant has brown spots,Disease Diagnosis
+Tomato leaves drying,Disease Diagnosis
+What disease affects wheat,Disease Diagnosis
+Best fertilizer for tomato,Fertilizer Recommendation
+Best fertilizer for rice,Fertilizer Recommendation
+Which fertilizer improves yield,Fertilizer Recommendation
+How much fertilizer for chilli,Fertilizer Recommendation
+How much water for chilli,Irrigation Advice
+Water requirement for rice,Irrigation Advice
+Irrigation schedule for wheat,Irrigation Advice
+How often should I water tomato,Irrigation Advice
+Pest attack on cotton,Pest Management
+How to control insects in rice,Pest Management
+Best pesticide for tomato,Pest Management
+How to remove pests from chilli,Pest Management
+Weather forecast for farming,Weather Advice
+Will rain affect crops,Weather Advice
+Can I spray pesticide before rain,Weather Advice
+Weather impact on farming,Weather Advice
+Which crop should I grow,Crop Recommendation
+Best crop for this season,Crop Recommendation
+Suitable crop for Karnataka,Crop Recommendation
+Which crop gives more profit,Crop Recommendation
+How to increase crop yield,Yield Improvement
+Tips to improve production,Yield Improvement
+How can I get better harvest,Yield Improvement
+Ways to improve yield,Yield Improvement
+Market price of rice,Market Price Information
+Current tomato price,Market Price Information
+Crop market trends,Market Price Information
+Price of wheat today,Market Price Information
+What is organic farming,General Agriculture Questions
+Benefits of crop rotation,General Agriculture Questions
+What is precision agriculture,General Agriculture Questions
+Modern farming techniques,General Agriculture Questions
