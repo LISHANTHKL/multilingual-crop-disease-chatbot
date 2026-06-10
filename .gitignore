@@ -1,12 +1,20 @@
+# Python
 venv/
-node_modules/
+__pycache__/
+*.pyc
 
+# Environment Variables
 .env
 
-__pycache__/
+# Node
+node_modules/
 
+# Build
 dist/
-
 build/
 
-*.pyc
+# VS Code
+.vscode/
+
+# OS
+.DS_Store
