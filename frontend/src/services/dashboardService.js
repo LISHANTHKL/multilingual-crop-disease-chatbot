@@ -1,12 +1,27 @@
 import axios from "axios";
 
-const API_URL = "http://127.0.0.1:8000";
+const API =
+  "http://localhost:8000/api/dashboard";
 
-export const getDashboardStats = async () => {
+export const getDashboardStats =
+  async () => {
 
-  const response = await axios.get(
-    `${API_URL}/api/dashboard/stats`
-  );
+    const response =
+      await axios.get(
+        `${API}/stats`
+      );
 
-  return response.data;
-};
+    return response.data;
+  };
+
+export const getRecentConversations =
+  async () => {
+
+    const response =
+      await axios.get(
+        `${API}/recent-conversations`
+      );
+
+    return response.data;
+  };
+

@@ -1,58 +1,122 @@
-import { useEffect, useState } from "react";
-import { getRecentChats } from "../services/chatService";
+import {
+  useEffect,
+  useState
+} from "react";
+
+import {
+  getRecentConversations
+} from "../services/dashboardService";
 
 export default function RecentConversations() {
 
-  const [chats, setChats] = useState([]);
+  const [conversations,
+    setConversations] = useState([]);
 
   useEffect(() => {
 
-    const loadChats = async () => {
+    loadConversations();
+
+  }, []);
+
+  const loadConversations =
+    async () => {
 
       try {
 
-        const data = await getRecentChats();
+        const data =
+          await getRecentConversations();
 
-        setChats(data.data);
+        setConversations(
+          data.conversations
+        );
 
       } catch (error) {
 
         console.error(error);
 
       }
-
     };
 
-    loadChats();
-
-  }, []);
-
   return (
-    <div className="weather-card p-4">
 
-      <h4 className="mb-4">
-        Recent Conversations
-      </h4>
+    <div className="card shadow-sm">
 
-      {
-        chats.length === 0
-        ? (
-          <p>No Chats Available</p>
-        )
-        : (
-          chats.map((chat) => (
+      <div className="card-header">
 
-            <div
-              key={chat._id}
-              className="alert alert-dark"
-            >
-              {chat.message}
-            </div>
+        <h5 className="mb-0">
+          Recent Conversations
+        </h5>
 
-          ))
-        )
-      }
+      </div>
+
+      <div className="card-body">
+
+        {
+          conversations.length === 0 ? (
+
+            <p>
+              No conversations found
+            </p>
+
+          ) : (
+
+            conversations.map(
+              (
+                chat,
+                index
+              ) => (
+
+                <div
+                  key={index}
+                  className="
+                    border-bottom
+                    mb-3
+                    pb-2
+                  "
+                >
+
+                  <strong>
+                    {chat.user_id}
+                  </strong>
+
+                  <p className="mb-1">
+                    {chat.query}
+                  </p>
+
+                  <small
+                    className="
+                      text-muted
+                    "
+                  >
+                    Crop:
+                    {" "}
+                    {chat.crop || "N/A"}
+                  </small>
+
+                  <br />
+
+                  <small
+                    className="
+                      text-muted
+                    "
+                  >
+                    Disease:
+                    {" "}
+                    {chat.disease || "N/A"}
+                  </small>
+
+                </div>
+
+              )
+            )
+
+          )
+        }
+
+      </div>
 
     </div>
+
   );
 }
+

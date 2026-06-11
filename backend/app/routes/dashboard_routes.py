@@ -1,22 +1,58 @@
 from fastapi import APIRouter
-from app.database.database import db
+
+from app.database.mongodb import db
+
+from app.services.dashboard_service import (
+    get_recent_conversations,
+    get_top_crops,
+    get_top_diseases,
+    get_most_active_user,
+    get_crop_distribution,
+    get_disease_distribution,
+    get_daily_chat_activity
+)
 
 router = APIRouter()
 
+
 @router.get("/stats")
-async def get_dashboard_stats():
+async def dashboard_stats():
 
-    total_users = await db.users.count_documents({})
+    total_users = db.users.count_documents({})
+    total_chats = db.chat_logs.count_documents({})
+    
+    top_crops = get_top_crops()
 
-    total_chats = await db.chat_logs.count_documents({})
+    top_diseases = get_top_diseases()
 
-    total_reports = await db.reports.count_documents({})
+    active_user = get_most_active_user()
+    cropDistribution =get_crop_distribution()
 
-    total_predictions = await db.disease_predictions.count_documents({})
+    diseaseDistribution =get_disease_distribution()
+
+    dailyActivity =get_daily_chat_activity()
+
 
     return {
         "totalUsers": total_users,
         "totalChats": total_chats,
-        "totalReports": total_reports,
-        "totalPredictions": total_predictions
+        "topCrops": top_crops,
+        "topDiseases": top_diseases,
+        "mostActiveUser": active_user,
+      "cropDistribution": cropDistribution,
+        "diseaseDistribution": diseaseDistribution,
+        "dailyActivity": dailyActivity
+
+
+    }
+
+
+@router.get("/recent-conversations")
+async def recent_conversations():
+
+    data = get_recent_conversations()
+
+    return {
+        "count": len(data),
+        "conversations": data
     }

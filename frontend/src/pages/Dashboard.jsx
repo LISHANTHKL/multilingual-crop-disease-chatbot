@@ -6,17 +6,27 @@ import AnalyticsChart from "../components/AnalyticsChart";
 import UserProfileCard from "../components/UserProfileCard";
 import RecentConversations from "../components/RecentConversations";
 import QuickActions from "../components/QuickActions";
-
+import AnalyticsDashboard from "../components/AnalyticsDashboard";
 import { getDashboardStats } from "../services/dashboardService";
+import IntelligenceWidget from "../components/IntelligenceWidget";
+import FarmerRecommendationWidget from "../components/FarmerRecommendationWidget";
 
 export default function Dashboard() {
 
-  const [stats, setStats] = useState({
-    totalUsers: 0,
-    totalChats: 0,
-    totalReports: 0,
-    totalPredictions: 0,
-  });
+const [stats, setStats] = useState({
+  cropDistribution: [],
+  diseaseDistribution: [],
+  dailyActivity: [],
+  totalUsers: 0,
+  totalChats: 0,
+  topCrops: [],
+  topDiseases: [],
+  cropDistribution: [],
+  diseaseDistribution: [],
+  dailyActivity: [],
+  mostActiveUser: {},
+});
+
 
   useEffect(() => {
 
@@ -100,6 +110,121 @@ export default function Dashboard() {
           </div>
 
           {/* Existing Widgets */}
+<div className="row g-4 mt-2">
+
+  <div className="col-md-6">
+
+    <div className="card shadow-sm">
+
+      <div className="card-header">
+        Top Crops
+      </div>
+
+      <div className="card-body">
+
+        {
+          stats.topCrops?.map(
+            (crop, index) => (
+
+              <p key={index}>
+                {crop._id}
+                {" - "}
+                {crop.count}
+              </p>
+
+            )
+          )
+        }
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <div className="col-md-6">
+
+    <div className="card shadow-sm">
+
+      <div className="card-header">
+        Top Diseases
+      </div>
+
+      <div className="card-body">
+
+        {
+          stats.topDiseases?.map(
+            (disease, index) => (
+
+              <p key={index}>
+                {disease._id}
+                {" - "}
+                {disease.count}
+              </p>
+
+            )
+          )
+        }
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+
+<div className="card shadow-sm mt-4">
+
+  <div className="card-body">
+
+    <h5>
+      Most Active Farmer
+      <AnalyticsDashboard
+    cropData={stats.cropDistribution}
+    diseaseData={stats.diseaseDistribution}
+    activityData={stats.dailyActivity} />
+    </h5>
+        <div className="row mt-4">
+
+  <div className="col-md-12">
+
+    <IntelligenceWidget />
+<div className="row mt-4">
+
+  <div className="col-md-12">
+
+    <FarmerRecommendationWidget />
+
+  </div>
+
+</div>
+  </div>
+
+</div>
+    <p>
+      User:
+      {" "}
+      {
+        stats.mostActiveUser?._id ||
+        "N/A"
+      }
+    </p>
+
+    <p>
+      Chats:
+      {" "}
+      {
+        stats.mostActiveUser?.count ||
+        0
+      }
+    </p>
+
+  </div>
+
+</div>
+
 
           <div className="row g-4 mb-4">
 

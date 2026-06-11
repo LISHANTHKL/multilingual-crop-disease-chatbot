@@ -46,6 +46,12 @@ from app.routes.chatbot_routes import (
 from app.routes.voice_routes import (
     router as voice_router
 )
+from app.routes.intelligence_routes import (
+    router as intelligence_router
+)
+from app.routes.farmer_intelligence_routes import (
+    router as farmer_intelligence_router
+)
 
 app = FastAPI(
     title="Multilingual Crop Disease Knowledge Chatbot",
@@ -164,6 +170,18 @@ app.include_router(
     voice_router,
     prefix="/api/voice",
     tags=["Voice AI"]
+)
+app.include_router(
+    intelligence_router,
+    prefix="/api/intelligence",
+    tags=["Agriculture Intelligence"]
+)
+app.include_router(
+    farmer_intelligence_router,
+    prefix="/api/farmer-intelligence",
+    tags=[
+        "Farmer Intelligence"
+    ]
 )
 
 # =========================
